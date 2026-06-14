@@ -1,0 +1,9 @@
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/traveler-sim.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/Experimental.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/Nightly.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/Continuous.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/RUN_TESTS.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/INSTALL.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/ALL_BUILD.dir
+C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/CMakeFiles/ZERO_CHECK.dir
