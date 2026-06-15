@@ -6,7 +6,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\include\core\engine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\include\core\vector3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\include\physics\state.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\include\vehicle\rocket.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
