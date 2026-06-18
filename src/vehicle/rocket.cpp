@@ -11,4 +11,8 @@ Rocket::Rocket(const std::string filename) : filename(filename) {}
 
 Rocket::~Rocket() {}
 
+const std::string& Rocket::get_filename() const {
+    return filename;
+}
+
 } // namespace vehicle

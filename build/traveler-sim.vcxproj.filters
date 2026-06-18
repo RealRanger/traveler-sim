@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\simulation\simulation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\traveler\traveler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\vehicle\rocket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

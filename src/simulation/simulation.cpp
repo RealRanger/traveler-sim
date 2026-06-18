@@ -12,8 +12,9 @@
 namespace simulation {
 
 Simulation::Simulation() 
-    :  m_FOLDER("./config"), 
-       m_FILE_PREFIX("rocket_config") {
+    :  m_FOLDER("../../config"), // executable exists in traveler-sim/build/Debug
+       m_FILE_PREFIX("rocket_config") 
+{
 
     try {
         for (const auto& entry : std::filesystem::directory_iterator(m_FOLDER)) {
@@ -28,12 +29,33 @@ Simulation::Simulation()
             }
             
         }
+
+        #ifdef DEBUG
+        std::cout << "[SIMULATION]: Rocket vector initialised with " 
+                  << rocket_vector.size() 
+                  << " rockets." 
+                  << std::endl;
+
+        for (size_t i  = 0; i < rocket_vector.size(); i++) {
+            std::cout << "[SIMULATION]: Loaded 'ROCKET " << i
+                      << "' with file '" << rocket_vector[i]->get_filename() << "'." << std::endl;
+
+        }
+        #endif
     } catch (const std::filesystem::filesystem_error& e) {
         std::cerr << "Filesystem error: " << e.what() << '\n';
     }
 }
 
 Simulation::~Simulation() {
+    cancel_active_rockets();
+}
+
+void Simulation::start() {
+
+}
+
+void Simulation::cancel_active_rockets() {
 
 }
 

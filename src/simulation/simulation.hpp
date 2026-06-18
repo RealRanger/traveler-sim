@@ -16,6 +16,7 @@ public:
     ~Simulation();
 
     void start();
+    void cancel_active_rockets();
 
 private:
     const std::string m_FOLDER;

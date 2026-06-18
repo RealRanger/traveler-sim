@@ -56,6 +56,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Dev/Software/Simulations/A
 set(OLD_GLOB
   "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/main.cpp"
   "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/simulation/simulation.cpp"
+  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/traveler/traveler.cpp"
   "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/vehicle/rocket.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

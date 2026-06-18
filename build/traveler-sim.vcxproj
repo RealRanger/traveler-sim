@@ -106,12 +106,12 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;DEBUG;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Dev\Software\Simulations\Aerospace\traveler-sim\include;C:\Dev\Software\Simulations\Aerospace\traveler-sim\config;C:\Dev\Software\Simulations\Aerospace\traveler-sim\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -370,6 +370,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\main.cpp" />
     <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\simulation\simulation.cpp" />
+    <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\traveler\traveler.cpp" />
     <ClCompile Include="C:\Dev\Software\Simulations\Aerospace\traveler-sim\src\vehicle\rocket.cpp" />
   </ItemGroup>
   <ItemGroup />

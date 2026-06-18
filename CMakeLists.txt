@@ -28,6 +28,11 @@ target_include_directories(${PROJECT_NAME}
         ${PROJECT_SOURCE_DIR}/config
     PRIVATE
         ${PROJECT_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/include
+)
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    $<$<CONFIG:Debug>:DEBUG>
 )
 
 

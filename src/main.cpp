@@ -1,6 +1,6 @@
-#include <iostream>
+#include "traveler/traveler.hpp"
 
 int main() {
-    std::cout << "Hello, Traveler!" << std::endl;
+    traveler::Traveler trl;
     return 0;
 }

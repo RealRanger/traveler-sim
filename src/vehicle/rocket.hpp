@@ -22,6 +22,7 @@ public:
 
     // Getters
     const physics::State& get_state() const;
+    const std::string& get_filename() const;
 
     // Setters
     void set_state(Vec3 pos, Vec3 velocity, Vec3 acceleration);
