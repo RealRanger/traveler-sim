@@ -31,16 +31,16 @@ Simulation::Simulation()
         }
 
         #ifdef DEBUG
-        std::cout << "[SIMULATION]: Rocket vector initialised with " 
-                  << rocket_vector.size() 
-                  << " rockets." 
-                  << std::endl;
+            std::cout << "[SIMULATION]: Rocket vector initialised with " 
+                    << rocket_vector.size() 
+                    << " rockets." 
+                    << std::endl;
 
-        for (size_t i  = 0; i < rocket_vector.size(); i++) {
-            std::cout << "[SIMULATION]: Loaded 'ROCKET " << i
-                      << "' with file '" << rocket_vector[i]->get_filename() << "'." << std::endl;
+            for (size_t i  = 0; i < rocket_vector.size(); i++) {
+                std::cout << "[SIMULATION]: Loaded 'ROCKET " << i
+                        << "' with file '" << rocket_vector[i]->get_filename() << "'." << std::endl;
 
-        }
+            }
         #endif
     } catch (const std::filesystem::filesystem_error& e) {
         std::cerr << "Filesystem error: " << e.what() << '\n';

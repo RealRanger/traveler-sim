@@ -1,1 +1,34 @@
 build/
+Debug/
+Release/
+MinSizeRel/
+RelWithDebInfo/
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.slnx
+
+# Build artifacts
+*.obj
+*.exe
+*.lib
+*.dll
+*.pdb
+
+# CMake
+CMakeUserPresets.json
+.cmake/
+
+# IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
