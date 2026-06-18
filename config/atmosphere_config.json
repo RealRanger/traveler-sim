@@ -1,0 +1,21 @@
+{
+  "config": {
+    "atmosphere": {
+      "temperature_c": 15.0,
+      "pressure_pa": 101325.0,
+      "humidity_percent": 50.0,
+      "wind_speed_ms": 2.0,
+      "wind_direction_deg": 0.0,
+      "turbulence_intensity": 5.0,
+      "lapse_rate_kpm": -0.0065,
+      "tropopause_alt_m": 11000.0,
+      "stratosphere_temp_k": 216.65,
+      "nitrogen_fraction": 0.78084,
+      "oxygen_fraction": 0.20946,
+      "argon_fraction": 0.00934,
+      "co2_fraction": 0.00036,
+      "gravity_ms2": 9.80665,
+      "planet_radius_m": 6371000.0
+    }
+  }
+}

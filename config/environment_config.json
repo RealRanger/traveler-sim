@@ -1,0 +1,25 @@
+{
+  "config": {
+    "environment": {
+      "launch_site": {
+        "launch_latitude_deg": 28.6084,
+        "launch_longitude_deg": -80.6043,
+        "launch_altitude_m": 3.0
+      },
+      "earth_model": {
+        "earth_rotation_rad_s": 7.2921159e-5,
+        "earth_mu_m3_s2": 398600441800000.0,
+        "gravity_varies_with_altitude": true
+      },
+      "simulation_settings": {
+        "time_step_s": 0.01,
+        "integrator_order": 4,
+        "enable_turbulence": true,
+        "enable_failures": false
+      },
+      "terrain": {
+        "ground_elevation_m": 0.0
+      }
+    }
+  }
+}

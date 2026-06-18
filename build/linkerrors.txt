@@ -1,0 +1,14 @@
+================================================================================
+Linker Errors
+Generated: 2026-06-18T09:51:17.203Z
+Total Errors: 3
+================================================================================
+
+[LNK2019] (MSVC)
+unresolved external symbol "public: __cdecl vehicle::Rocket::Rocket(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Rocket@vehicle@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "class std::unique_ptr<class vehicle::Rocket,struct std::default_delete<class vehicle::Rocket> > __cdecl std::make_unique<class vehicle::Rocket,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,0>(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)" (??$make_unique@VRocket@vehicle@@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$0A@@std@@YA?AV?$unique_ptr@VRocket@vehicle@@U?$default_delete@VRocket@vehicle@@@std@@@0@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z) [C:\Dev\Software\Simulations\Aerospace\traveler-sim\build\traveler-sim.vcxproj]
+
+[LNK2019] (MSVC)
+unresolved external symbol "public: __cdecl vehicle::Rocket::~Rocket(void)" (??1Rocket@vehicle@@QEAA@XZ) referenced in function "public: void * __cdecl vehicle::Rocket::`scalar deleting destructor'(unsigned int)" (??_GRocket@vehicle@@QEAAPEAXI@Z) [C:\Dev\Software\Simulations\Aerospace\traveler-sim\build\traveler-sim.vcxproj]
+
+[LNK1120] (MSVC)
+2 unresolved externals [C:\Dev\Software\Simulations\Aerospace\traveler-sim\build\traveler-sim.vcxproj]

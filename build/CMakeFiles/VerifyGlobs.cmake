@@ -29,10 +29,6 @@ endif()
 # HEADERS at CMakeLists.txt:18 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Dev/Software/Simulations/Aerospace/traveler-sim/include/*.hpp")
 set(OLD_GLOB
-  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/include/core/engine.hpp"
-  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/include/core/vector3.hpp"
-  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/include/physics/state.hpp"
-  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/include/vehicle/rocket.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -59,6 +55,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/*.cpp")
 set(OLD_GLOB
   "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/main.cpp"
+  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/simulation/simulation.cpp"
+  "C:/Dev/Software/Simulations/Aerospace/traveler-sim/src/vehicle/rocket.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

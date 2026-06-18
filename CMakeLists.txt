@@ -26,7 +26,10 @@ target_include_directories(${PROJECT_NAME}
     PUBLIC
         ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/config
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/src
 )
+
 
 # Example: link external libraries if needed
 # find_package(Eigen3 REQUIRED)

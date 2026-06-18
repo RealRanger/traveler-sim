@@ -1,0 +1,26 @@
+{
+  "config": {
+    "rocket": {
+      "geometry": {
+        "length_m": 1.8,
+        "diameter_m": 0.1,
+        "fin_count": 3
+      },
+      "mass": {
+        "dry_mass_kg": 2.0,
+        "payload_mass_kg": 0.2,
+        "propellant_mass_kg": 1.2
+      },
+      "propulsion": {
+        "max_thrust_n": 300.0,
+        "average_thrust_n": 180.0,
+        "burn_time_s": 2.0,
+        "isp_s": 210.0
+      },
+      "control": {
+        "thrust_vectoring": false,
+        "max_gimbal_angle_deg": 0.0
+      }
+    }
+  }
+}

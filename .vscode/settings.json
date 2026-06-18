@@ -1,4 +1,12 @@
 {
   "cmake.generator": "Visual Studio 18 2026",
-  "cmake.buildDirectory": "${workspaceFolder}/build"
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "C_Cpp.intelliSenseEngine": "Default",
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "C_Cpp.default.intelliSenseMode": "msvc-x64",
+  "C_Cpp.default.cppStandard": "c++23",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**"
+  ],
+  "C_Cpp.errorSquiggles": "Enabled"
 }
