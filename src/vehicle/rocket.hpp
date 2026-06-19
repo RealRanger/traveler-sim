@@ -17,12 +17,27 @@ public:
     enum class RocketHealth { Functional, Failed };
     enum class FlightPhase { Stationary, Ascending, Descending, Landed, Crashed };
 
-    Rocket(std::string filename);
+    
+    Rocket(
+        const std::string& file_path,
+        float length_m,
+        float diameter_m,
+        int fin_count,
+        float dry_mass_kg,
+        float payload_mass_kg,
+        float propellant_mass_kg,
+        float max_thrust_n,
+        float average_thrust_n,
+        float burn_time_s,
+        float isp_s,
+        bool thrust_vectoring,
+        float max_gimbal_angle_deg
+    );
     ~Rocket();
 
     // Getters
     const physics::State& get_state() const;
-    const std::string& get_filename() const;
+    const std::string& get_file_path() const;
 
     // Setters
     void set_state(Vec3 pos, Vec3 velocity, Vec3 acceleration);
@@ -30,8 +45,24 @@ public:
     // Utility
 
 private:
-    std::string filename;
+    std::string file_path;
     physics::State state;
+
+    float length_m;
+    float diameter_m;
+    int fin_count;
+
+    float dry_mass_kg;
+    float payload_mass_kg;
+    float propellant_mass_kg;
+
+    float max_thrust_n;
+    float average_thrust_n;
+    float burn_time_s;
+    float isp_s;
+
+    bool  thrust_vectoring;
+    float max_gimbal_angle_deg;
 };
 
 } // namespace vehicle

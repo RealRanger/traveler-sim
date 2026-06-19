@@ -29,6 +29,8 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
         ${PROJECT_SOURCE_DIR}/src
         ${PROJECT_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/lib
+
 )
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE

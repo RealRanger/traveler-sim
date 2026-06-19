@@ -22,6 +22,7 @@ private:
     const std::string m_FOLDER;
     const std::string m_FILE_PREFIX;
 
+
     std::vector<std::unique_ptr<vehicle::Rocket>> rocket_vector;
 };
 
