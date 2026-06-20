@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Dev/Software/Simulations/Aerospace/traveler-sim/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

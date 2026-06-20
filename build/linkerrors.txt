@@ -1,8 +1,0 @@
-================================================================================
-Linker Errors
-Generated: 2026-06-18T15:02:55.892Z
-Total Errors: 1
-================================================================================
-
-[LNK1104] (MSVC)
-cannot open file 'C:\Dev\Software\Simulations\Aerospace\traveler-sim\build\Debug\traveler-sim.exe' [C:\Dev\Software\Simulations\Aerospace\traveler-sim\build\traveler-sim.vcxproj]
