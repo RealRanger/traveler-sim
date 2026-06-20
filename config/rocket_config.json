@@ -1,6 +1,7 @@
 {
   "config": {
     "rocket": {
+      "name": "My_Rocket_1",
       "geometry": {
         "length_m": 1.8,
         "diameter_m": 0.1,

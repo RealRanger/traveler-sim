@@ -3,6 +3,7 @@
 
 #include "simulation.hpp"
 #include "vehicle/rocket.hpp"
+#include "core/rocket_config_file.hpp"
 #include "json.hpp"
 
 #include <memory>
@@ -25,56 +26,34 @@ Simulation::Simulation()
             if (!entry.is_regular_file()) {
                 continue;
             }
-            // TODO: make this its own system so simulation does not have to handle file parsing
-            std::string filename = entry.path().filename().string();
-            if (filename.rfind(m_FILE_PREFIX, 0) == 0) {
-                std::string file_path = entry.path().string();
 
-                std::ifstream file(file_path);
-                if (!file.is_open()) {
-                    std::cerr << "Opening file '" 
-                              << filename 
-                              << "' failed" 
-                              << std::endl;
-                    continue;
-                }
-
-                json config;
-                file >> config;
-
-                float length_m = config["config"]["rocket"]["geometry"]["length_m"];
-                float diameter_m = config["config"]["rocket"]["geometry"]["diameter_m"];
-                int fin_count = config["config"]["rocket"]["geometry"]["fin_count"];
-
-                float dry_mass_kg = config["config"]["rocket"]["mass"]["dry_mass_kg"];
-                float payload_mass_kg = config["config"]["rocket"]["mass"]["payload_mass_kg"];
-                float propellant_mass_kg = config["config"]["rocket"]["mass"]["propellant_mass_kg"];
-
-                float max_thrust_n = config["config"]["rocket"]["propulsion"]["max_thrust_n"];
-                float average_thrust_n = config["config"]["rocket"]["propulsion"]["average_thrust_n"];
-                float burn_time_s = config["config"]["rocket"]["propulsion"]["burn_time_s"];
-                float isp_s = config["config"]["rocket"]["propulsion"]["isp_s"];
-
-                bool thrust_vectoring = config["config"]["rocket"]["control"]["thrust_vectoring"];
-                float max_gimbal_angle_deg = config["config"]["rocket"]["control"]["max_gimbal_angle_deg"];
-
-                // Treat each rocket config file as a new Rocket instance
-                rocket_vector.push_back(std::make_unique<vehicle::Rocket>(
-                    file_path,
-                    length_m,
-                    diameter_m,
-                    fin_count,
-                    dry_mass_kg,
-                    payload_mass_kg,
-                    propellant_mass_kg,
-                    max_thrust_n,
-                    average_thrust_n,
-                    burn_time_s,
-                    isp_s,
-                    thrust_vectoring,
-                    max_gimbal_angle_deg
-                ));
+            const auto filename = entry.path().filename().string();
+            if (filename.rfind(m_FILE_PREFIX, 0) != 0 || entry.path().extension() != ".json") {
+                continue;
             }
+
+            core::RocketConfigFile rocket_config_file(entry.path().string());
+            if (!rocket_config_file.is_valid()) {
+                continue;
+            }
+
+            auto config = rocket_config_file.get_config();
+            // Treat each rocket config file as a new Rocket instance
+            rocket_vector.push_back(std::make_unique<vehicle::Rocket>(
+                config.path,
+                config.length_m,
+                config.diameter_m,
+                config.fin_count,
+                config.dry_mass_kg,
+                config.payload_mass_kg,
+                config.propellant_mass_kg,
+                config.max_thrust_n,
+                config.average_thrust_n,
+                config.burn_time_s,
+                config.isp_s,
+                config.thrust_vectoring,
+                config.max_gimbal_angle_deg
+            ));
         }
 
         #ifdef DEBUG
