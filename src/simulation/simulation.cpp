@@ -41,6 +41,7 @@ Simulation::Simulation()
             // Treat each rocket config file as a new Rocket instance
             rocket_vector.push_back(std::make_unique<vehicle::Rocket>(
                 config.path,
+                config.name,
                 config.length_m,
                 config.diameter_m,
                 config.fin_count,

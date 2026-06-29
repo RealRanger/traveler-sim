@@ -10,6 +10,7 @@ namespace vehicle {
 
 Rocket::Rocket(
     const std::string& file_path,
+    std::string name,
     float length_m,
     float diameter_m,
     int fin_count,
@@ -24,6 +25,7 @@ Rocket::Rocket(
     float max_gimbal_angle_deg
 )
 : file_path(file_path),
+  name(name),
   length_m(length_m),
   diameter_m(diameter_m),
   fin_count(fin_count),
@@ -39,7 +41,8 @@ Rocket::Rocket(
 {
     #ifdef DEBUG
         std::cout << "[ROCKET]: Created rocket object with values:\n"
-          << "  filename: " << file_path << "\n"
+          << "  path: " << file_path << "\n"
+          << "  name: " << name << "\n"
           << "  length_m: " << length_m << "\n"
           << "  diameter_m: " << diameter_m << "\n"
           << "  fin_count: " << fin_count << "\n"

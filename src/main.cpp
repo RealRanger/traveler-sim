@@ -1,6 +1,6 @@
 #include "traveler/traveler.hpp"
 
 int main() {
-    traveler::Traveler trl;
+    traveler::Traveler trav;
     return 0;
 }

@@ -20,6 +20,7 @@ public:
     
     Rocket(
         const std::string& file_path,
+        std::string name,
         float length_m,
         float diameter_m,
         int fin_count,
@@ -47,6 +48,7 @@ public:
 private:
     std::string file_path;
     physics::State state;
+    std::string name;
 
     float length_m;
     float diameter_m;
